@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/common.css">
+    <script src="main.js"></script>
+
+    <script>
+        function wrapper() {
+
+            document.getElementById("wrapper").style.backgroundColor = "lightgreen";
+        
+
+            document.getElementById("knap").style.backgroundColor = "blue";
+            document.getElementById("knap").style.color = "white";
+            document.getElementById("knap").disabled = true;
+
+    
+        }
+    
+    </script>
+
+
+
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>
+
+    <div id="wrapper">
+
+        <h1>Opgave 3: Skift baggrundsfarve på wrapper</h1>
+
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis lectus quis sem lacinia nonummy.</p>
+
+        <div>
+            <h2>Underoverskrift af en slags</h2>
+            <p>Proin mollis lorem non dolor. In hac habitasse platea dictumst. Nulla ultrices odio. Donec augue.
+                Phasellus dui. </p>
+        </div>
+
+        <input type="button" value="Klik her" id="knap" onclick="wrapper()" />
+
+        <div id="opgaven">
+
+            <h4>Opgaven</h4>
+
+            <ol>
+                <li>Når der klikkes på knappen:</li>
+                <li>Skal id=wrapper (wrapper er på _Layout-filen) skifte baggrundsfarve til svag grøn</li>
+                <li>Skal knappen selv have blå baggrundsfarve og hvid tekst</li>
+                <li>Skal knappen selv disable's (ikke-klikbar)</li>
+            </ol>
+
+            <p id="help">
+                Få hjælp fx her:
+                <a href="http://www.w3schools.com/jsref/prop_style_backgroundcolor.asp" target="_blank">Noget om
+                    style</a> og
+                <a href="http://www.w3schools.com/jsref/prop_pushbutton_disabled.asp" target="_blank">om at disable en
+                    knap</a>
+
+            </p>
+
+        </div>
+
+
+    </div>
