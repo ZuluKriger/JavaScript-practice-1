@@ -7,17 +7,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/common.css">
     <script src="main.js"></script>
-
 <script>
-    function today(){
 
-        
-    }
+    var visDato = document.getElementById("dato");
+    var visDag = document.getElementById("slagsdag");
 
+    var idag = new Date();
+
+    var dd = idag.getDate();
+    var mm = idag.getMonth() + 1;
+    var yyyy = idag.getFullYear();
+    var ugensDag = idag.getDay();
+
+    knap.addEventListener('click', function() {
+        console.log("klik");
+
+    idag = dd+'-'+mm+'-'+yyyy;
+    visDato.innerHTML = idag;
+
+        if (ugensDag == 1, 2, 3, 4) {
+            visDag.innerHTML = "Øv det er hverdag"
+        } else if (ugensDag == 5) {
+            visDag.innerHTML = "Hverdag men NÆSTEN weekend"
+        } else if (ugensDag == 6, 0) {
+            visDag.innerHTML = "Hurra - det er weekend"
+        } else {
+            visDag.innerHTML = "Der er sket en fejl"
+        }
+    })
 
 
 
 </script>
+
 
 
 
@@ -28,7 +50,7 @@
     
 </body>
 </html>
-    <div id="wrapper">
+<div id="wrapper">
 
         <h1>Opgave 7: Datoer og betingelser</h1>
 
@@ -36,7 +58,7 @@
         <p id="dato">Hvilken dato er det mon i dag?</p>
         <p id="slagsdag">Og hvilken slags dag er det?</p>
 
-        <input type="button" value="Klik her" id="knap" onclick="" />
+        <input type="button" value="Klik her" id="knap" onclick=""/>
 
         <div id="opgaven">
 
