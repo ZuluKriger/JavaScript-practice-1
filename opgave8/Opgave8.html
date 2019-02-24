@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/common.css">
+    
+</head>
+<body>
+    
 
 
     <div id="wrapper">
@@ -36,3 +48,42 @@
 
 
     </div>
+
+        <script>
+            var visText = document.getElementById("seasontext");
+            var visImage = document.getElementById("seasonimage");
+            
+
+            var idag = new Date();
+
+            // var findDato = idag.getDate();
+            var findMaaned = idag.getMonth() +1;
+            // var findAar = idag.getFullYear();
+            // var findDag = idag.getDay();
+
+            idag = findMaaned;
+
+            visText.innerHTML = idag;
+
+
+            function aarsTider() {
+	document.getElementById("seasontext").innerHTML=Date();
+    if(findMaaned == 1, 2, 3) {
+        visText.innerHTML = "Vinter"
+    } else if(findMaaned == 4, 5, 6) {
+        visText.innerHTML = "Forår"
+    } else if(findMaaned == 7, 8, 9) {
+        visText.innerHTML = "Sommer"
+    } else {
+        visText.innerHTML = "Efterår"
+    }
+}
+window.onload = aarsTider;
+        
+        
+        
+        </script>
+
+
+</body>
+</html>
