@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/common.css">
+    <title>Opgave 13</title>
+    <script>
+        // Det her er et array med objekter i ... l�s gerne om objekter her: https://www.w3schools.com/js/js_object_definition.asp
+        var ekkoShortlist = [
+                {titel: "GR4DE", instruktor: "Aske S�rensen", shortlist: 1},
+                {titel: "Esther, min elskede", instruktor: "Julius Lagoutte Larsen", shortlist: 4},
+                {titel: "Cathrine Dufour the Story", instruktor: "Tobias Damkj�r", shortlist: 3},
+                {titel: "Den apokryfe prins", instruktor: "Anton Isbrand", shortlist: 2}
+            ];
+
+        function Udskriv(){
+
+            var frst = ekkoShortlist[0].titel + "....." + ekkoShortlist[0].instruktor + "....." + ekkoShortlist[0].shortlist;
+            document.getElementById("foerste").innerHTML = frst;
+            var alle ="";
+            for (var i=0; i < ekkoShortlist.length; i++) {
+
+                alle += ekkoShortlist[i].titel;
+
+            }
+                document.getElementById("alle").innerHTML = alle;
+            
+        }
+    </script>
+</head>
+
+<body>
+
+
+    <div id="wrapper">
+
+        <h1 id="overskrift">Opgave 13: Array-�velse 2</h1>
+        <p>Bem�rk array'et i script-tag i head!</p>
+
+        <p id="foerste"></p>
+        <div id="alle"></div>
+
+        <input type="button" value="Klik her for at udskrive objekterne i arrayet" id="knap" onclick="Udskriv()" />
+
+        <div id="opgaven">
+
+            <h4>Opgaven</h4>
+            <p>Et array kan v�re mere kompliceret end det i opgaven f�r. Arrayet i opgaven her best�r af objekter - se link under afsnittet "Hj�lp".</p>
+
+            <ol>
+                <li>N�r man klikker p� knappen -> </li>
+                <li>... skal listens nr. 1 objekt (index = 0) have alle sine v�rdier (titel, instruktor, ekkoshortlist) udskrevet i #foerste</li>
+                <li>... skal listen/arrayet loopes igennem og "titel" og "instruktor" for alle skal udskrives i #alle.</li>
+                <li>Pr�v evt. om du kan udskrive/loope v�rdierne ud i en html-liste ol eller ul og stil det lidt p�nt op ...</li>
+            </ol>
+
+            <p id="help" class="b">F� hj�lp fx her:</p>
+            <ul>
+                <li><a href="https://www.w3schools.com/js/js_object_definition.asp">JavaScript Objects</a></li>
+                <li><a href="https://stackoverflow.com/a/48916461/5094873">How to loop through an array containing objects and access their properties</a></li>
+                <li><a href="https://www.tutorialspoint.com/javascript/javascript_arrays_object.htm" target="_blank"></a></li>
+                <li><a href="https://www.w3schools.com/js/js_arrays.asp" target="_blank">JavaScript Arrays (se fx afsnittet "Access the Elements of an Array")</a></li>
+                <li><a href="https://www.w3schools.com/js/js_loop_for.asp" target="_blank">JavaScript For Loop</a></li>
+                <li><a href="https://www.w3schools.com/js/js_array_iteration.asp" target="_blank">Lidt anderledes m�der at loope et array ud p�: JavaScript Array Iteration Methods</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" target="_blank">Array.prototype.forEach()</a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="da">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/common.css">
-    
+
 </head>
+
 <body>
-    
+
 
 
     <div id="wrapper">
@@ -19,7 +21,7 @@
 
         <h2 id="seasontext">Vis årstiden</h2>
         <div id="seasonimage">
-            <img src="./img/default.jpg" />
+            <img id="season" src="img/default.jpg" />
         </div>
 
         <div id="opgaven">
@@ -29,7 +31,8 @@
             <ol>
                 <li>Når siden loader:</li>
                 <li>Skal div'en (id=seasonimage) indeholde det image, som passer til årstiden</li>
-                <li>Og h2-tag'et (id=seasontext) skal indeholde en passende overskrift (fx Sommer, Efterår, Vinter eller
+                <li>Og h2-tag'et (id=seasontext) skal indeholde en passende overskrift (fx Sommer, Efterår, Vinter
+                    eller
                     Forår)</li>
             </ol>
 
@@ -38,8 +41,8 @@
 
             <p id="help">
                 Få hjælp fx her:
-                <a href="http://www.w3schools.com/js/js_dates.asp" target="_blank">JavaScript Dates</a>, <a
-                    href="http://www.w3schools.com/js/js_date_methods.asp" target="_blank">JavaScript Date Methods</a>
+                <a href="http://www.w3schools.com/js/js_dates.asp" target="_blank">JavaScript Dates</a>, <a href="http://www.w3schools.com/js/js_date_methods.asp"
+                    target="_blank">JavaScript Date Methods</a>
                 og <a href="http://www.w3schools.com/js/js_if_else.asp" target="_blank">conditions/if-else</a> og/eller
                 <a href="http://www.w3schools.com/js/js_switch.asp" target="_blank">switch</a>
             </p>
@@ -49,41 +52,43 @@
 
     </div>
 
-        <script>
-            var visText = document.getElementById("seasontext");
-            var visImage = document.getElementById("seasonimage");
+    <script>
+        var visText = document.getElementById("seasontext");
+        var visImage = document.getElementById("seasonimage");
+
+
+        var idag = new Date();
+
+        
+        var findMaaned = idag.getMonth() + 1;
+        
+        window.onload = function onload(){
+
+        
+        idag = findMaaned;
+
+        visText.innerHTML = idag;
+
+        
+
             
-
-            var idag = new Date();
-
-            // var findDato = idag.getDate();
-            var findMaaned = idag.getMonth() +1;
-            // var findAar = idag.getFullYear();
-            // var findDag = idag.getDay();
-
-            idag = findMaaned;
-
-            visText.innerHTML = idag;
-
-
-            function aarsTider() {
-	document.getElementById("seasontext").innerHTML=Date();
-    if(findMaaned == 1, 2, 3) {
-        visText.innerHTML = "Vinter"
-    } else if(findMaaned == 4, 5, 6) {
-        visText.innerHTML = "Forår"
-    } else if(findMaaned == 7, 8, 9) {
-        visText.innerHTML = "Sommer"
-    } else {
-        visText.innerHTML = "Efterår"
-    }
-}
-window.onload = aarsTider;
+            if (findMaaned == 1, 2, 3) {
+                visText.innerHTML = "Vinter";
+                season.src = "img/winter.jpg";
+            } else if (findMaaned == 4, 5, 6) {
+                season.innerHTML = "Forår"
+            } else if (findMaaned == 7, 8, 9) {
+                visText.innerHTML = "Sommer"
+            } else {
+                visText.innerHTML = "Efterår"
+            }
         
+        }
+
         
-        
-        </script>
+    </script>
 
 
 </body>
+
 </html>
