@@ -1,7 +1,7 @@
 var snegl1 = {
     id: "a",
     navn: "Snegl 1",
-    foto: "./img/snegl1.png",
+    foto: "snegl1.png",
     x: -160,
     y: -40
 };
@@ -9,7 +9,7 @@ var snegl1 = {
 var snegl2 = {
     id: "b",
     navn: "Snegl 2",
-    foto: "./img/snegl2.png",
+    foto: "snegl2.png",
     x: -160,
     y: 40
 };
@@ -35,8 +35,8 @@ window.onload = function() {
     s2.id = snegl2.id;
     s2.className = "snegle-container";
     s2.style.backgroundImage = "url('" + snegl2.foto + "')";
-    s2.style.top = snegl1.y + "px";
-    s2.style.left = snegl1.x + "px";
+    s2.style.top = snegl2.y + "px";
+    s2.style.left = snegl2.x + "px";
     racetrack.appendChild(s2);
 
 }
