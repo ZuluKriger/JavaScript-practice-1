@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Slide - Galleri</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <!-- Ydre container for image-menuen -->
+<div id="imgmenucontainer">
+
+    <!-- Navigationen med de 2 pile til at skubbe menuen frem og tilbage -->
+    <div id="imgpusher">
+
+        <img src="img/left.png" onclick="slideLeft()" alt="pil" id="left">
+        <img src="img/right.png" onclick="slideRight()" alt="pil" id="right">
+
+        
+    </div>
+
+    <!-- Menuen med de små thumbs -->
+    <div id="imgmenu">
+
+        <img src="img/thumb/cat1.jpg" onclick="showImg(this)" alt="foto">
+        <img src="img/thumb/cat2.jpg" onclick="showImg(this)" alt="foto">
+        <img src="img/thumb/cat3.jpg" onclick="showImg(this)" alt="foto">
+
+    </div>
+</div>
+
+    <!-- Ydre container for det store image -->
+<div id="imgcontainer">
+    <img src="img/big/cat1.jpg" alt="">
+</div>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
