@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+    <movie>
+        <title>Bohemian Rhapsody</title>
+        <year>2018</year>
+        <director>Bryan Singer</director>
+        <country>USA</country>
+        <censur>+16</censur>
+        <rank>10</rank>
+    </movie>
+
+
+    <movie>
+        <title>A star is born</title>
+        <year>2018</year>
+        <director>Bradley Cooper</director>
+        <country>USA</country>
+        <censur>+16</censur>
+        <rank>10</rank>
+    </movie>
+
+
+    <movie>
+        <title>Green Book</title>
+        <year>2018</year>
+        <director>Peter Farrelly</director>
+        <country>USA</country>
+        <censur>+16</censur>
+        <rank>10</rank>
+    </movie>
+</catalog>

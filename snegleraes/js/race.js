@@ -1,6 +1,7 @@
 var snegl1 = {
     id: "a",
     navn: "Snegl 1",
+    title: "Bent",
     foto: "snegl1.png",
     x: -160,
     y: -40
@@ -9,6 +10,7 @@ var snegl1 = {
 var snegl2 = {
     id: "b",
     navn: "Snegl 2",
+    title: "Vagn",
     foto: "snegl2.png",
     x: -160,
     y: 40
@@ -25,6 +27,7 @@ window.onload = function() {
 
     var s1 = document.createElement("div");
     s1.id = snegl1.id;
+    s1.title = snegl1.title;
     s1.className = "snegle-container";
     s1.style.backgroundImage = "url('" + snegl1.foto + "')";
     s1.style.top = snegl1.y + "px";
@@ -60,7 +63,7 @@ function afsted() {
         setTimeout("winner('" + snegl2.navn + "');", 1000);
 
     } else if (snegl2.x > snegl1.x) {
-        setTimeout("winner('" + snegl2.navn + "');", 1000);
+        setTimeout("winner('" + snegl1.navn + "');", 1000);
 
     } else {
         setTimeout("winner('');", 1000);
