@@ -20,7 +20,7 @@ function kaldWerbservice(){
     fetch(dfiurl, {
         method: 'get',
         headers: new Headers({
-            Authorization: "basic " + btoa('F005936:JRbTlfWVMH0bm3n')
+            Authorization: "Basic " + btoa('F005936:JRbTlfWVMH0bm3n')
         })
     }).then(function(response){
         
@@ -29,7 +29,12 @@ function kaldWerbservice(){
 
     }).then(function(jsonsvar){
 
+
         console.log(jsonsvar);
+
+
+        udskrivData(jsonsvar);
+
     }).catch(function(error){
 
         console.log("Der er sket en fejl!!");
@@ -44,8 +49,15 @@ function kaldWerbservice(){
 
 
 //function til at udskrive data/resultatet i html
-function udskrivData(){
+function udskrivData(jsonData){
 
+        document.getElementById("titel").innerHTML = jsonData.Title + " (" + jsonData.DanishTitle + ")";
+
+
+        document.getElementById("beskrivelse").innerHTML = jsonData.Description;
+
+
+        document.getElementById("premiere").innerHTML = "premiere: " + jsonData.Premiere[0].PremiereDate; 
 
 
 };
