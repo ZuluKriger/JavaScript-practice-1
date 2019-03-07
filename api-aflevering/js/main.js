@@ -40,7 +40,7 @@ function kaldWebservice() {
 
 // Håndterer data og udskriver i html - eller hvad der nu skal ske
 function udskrivData(jsondata) {
-    //<option value="8000 Aarhus"></option>
+
 
     var nyheder = "";
 
