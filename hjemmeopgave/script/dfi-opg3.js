@@ -14,6 +14,7 @@ window.onload = function(){
     document.getElementById("inpSoeg").addEventListener("keyup", function(){
 
         var soegeord = document.getElementById("inpSoeg").value;
+        
 
         dfiurl = "https://api.dfi.dk/v1/film?SortBy=title&Title=" + soegeord;
 
